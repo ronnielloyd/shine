@@ -1,10 +1,14 @@
 #shine for reddit
 
-<img src="http://i.imgur.com/ZBpVU3g.jpg">
-<img src="http://i.imgur.com/7mXOfSJ.jpg">
-<img src="http://i.imgur.com/IK4wbCN.jpg">
-<img src="http://i.imgur.com/qXsowJZ.jpg">
-<img src="http://i.imgur.com/RKQui9B.jpg">
+<p float="left">
+    <img src="http://i.imgur.com/ZBpVU3g.jpg" width="400">
+    <img src="http://i.imgur.com/7mXOfSJ.jpg" width="400">
+</p>
+<p float="left">
+    <img src="http://i.imgur.com/IK4wbCN.jpg" width="400">
+    <img src="http://i.imgur.com/qXsowJZ.jpg" width="400">
+</p>
+<img src="http://i.imgur.com/RKQui9B.jpg" width="400">
 
 This is an extensions that is on Google chrome extension website. The app was sold and the new owner decided to inject cookies and shit in to the app, like a scube. So I downloaded the extension before he sold it, and got the code so we don't have to worry.
 
