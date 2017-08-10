@@ -1,4 +1,4 @@
-#shine for reddit
+# shine for reddit
 
 <p float="left">
     <img src="http://i.imgur.com/ZBpVU3g.jpg" width="400">
@@ -10,8 +10,7 @@
 </p>
 <img src="http://i.imgur.com/RKQui9B.jpg" width="400">
 
-This is an extensions that is on Google chrome extension website. The app was sold and the new owner decided to inject cookies and shit in to the app, like a scube. So I downloaded the extension before he sold it, and got the code so we don't have to worry.
-
+Experience reddit with new modern list and grid view interfaces that focus on bringing the content to you.
 
 # Installation
 
