@@ -212,7 +212,7 @@ function SHINE(){
 				'<div data-settings-panel=".panel-list" class="tab tab-list">List Settings</div>'+
 			'</div>'+
 			'<div class="panel panel-default panel-active">'+
-				'<div class="shine-settings-prompt shine-prompt">Get a Shine Bright account to unlock the settings below.</div>'+
+				'<div class="shine-settings-prompt">Free shine account for everyone thanks to /u/suprunyuck.</div>'+
 				'<div class="settings-halves">'+
 					'<div class="settings-column-half">'+
 						'<label for="settings-default-view">Default View</label>'+
@@ -262,7 +262,7 @@ function SHINE(){
 				'</div>'+
 			'</div>'+
 			'<div class="panel panel-grid">'+
-				'<div class="shine-settings-prompt shine-prompt">Get a Shine Bright account to unlock the settings below.</div>'+
+				'<div class="shine-settings-prompt">Free shine account for everyone thanks to /u/suprunyuck.</div>'+
 				'<p>The settings below are applied to all Grid View pages.</p>'+
 				'<div class="settings-halves">'+
 					'<div class="settings-column-half">'+
@@ -297,7 +297,7 @@ function SHINE(){
 				'</div>'+
 			'</div>'+
 			'<div class="panel panel-list">'+
-				'<div class="shine-settings-prompt shine-prompt">Get a Shine Bright account to unlock the settings below.</div>'+
+				'<div class="shine-settings-prompt">Free shine account for everyone thanks to /u/suprunyuck.</div>'+
 				'<p>The settings below are applied to all List View pages.</p>'+
 				'<div class="settings-halves">'+
 					'<div class="settings-column-half">'+
@@ -387,15 +387,6 @@ function SHINE(){
 
 	if( currentSettings.account.status == "shinelight" ){
 
-		$('#settings-default-view').attr("disabled","disabled");
-		$('#settings-night-mode').attr("disabled","disabled");
-		$('#settings-shortcuts-bar').attr("disabled","disabled");
-		$('#settings-number-columns').attr("disabled","disabled");
-		$('#settings-show-nsfw').attr("disabled","disabled");
-		$('#settings-list-layout').attr("disabled","disabled");
-		$('#settings-grid-split').attr("disabled","disabled");
-		$('#settings-list-split').attr("disabled","disabled");
-
 	}
 
 
@@ -437,7 +428,7 @@ function SHINE(){
 
 	if( currentSettings.account.status == "shinelight" ){
 
-		$('#header-bottom-left').prepend('<div class="header-shine-bright shine-prompt">Get Shine Bright Now</div>');
+		$('#header-bottom-left').prepend('<div class="header-shine-bright">Free shine account for everyone thanks to /u/suprunyuck.</div>');
 
 	}
 
@@ -726,20 +717,6 @@ function SHINE(){
         $('body').append('<div class="shine-bright-panel"></div>');
         
     }
-
-	$('body').on('click','.shine-prompt', function(e){
-        
-        if( currentSettings.account.status == "shinelight" ){
-            $('.shine-bright-panel').html('<iframe id="shine-bright-iframe" frameborder="0" height="100%" width="100%" src="https://madewithgusto.com/SHINE-IFRAME-CREATEACCOUNT.php" />');
-        }
-
-		$('html').addClass("show-shine-bright");
-
-		e.preventDefault();
-		e.stopPropagation();
-		return false;
-
-	});
     
     $('body').on('click','#shine-bright-logout', function(){
        
