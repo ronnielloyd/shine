@@ -1,5 +1,6 @@
 // GLOBAL RESETS AND FIXES 
 $('body').removeClass("listing-chooser-collapsed");
+$('html').removeClass('shinelight');
 $('html').addClass('shinebright');
 
 
@@ -422,11 +423,7 @@ function SHINE(){
 	// this adds a class to the html that says if we've paid or not
 	$('html').addClass( currentSettings.account.status );
 
-	if( currentSettings.account.status == "shinelight" ){
 
-		$('#header-bottom-left').prepend('<div class="header-shine-bright">Free shine account for everyone thanks to /u/suprunyuck.</div>');
-
-	}
 
 
 
