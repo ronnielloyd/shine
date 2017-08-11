@@ -1,7 +1,11 @@
 // GLOBAL RESETS AND FIXES 
-$('body').removeClass("listing-chooser-collapsed");
-$('html').removeClass('shinelight');
-$('html').addClass('shinebright');
+try {
+
+	$('html').removeClass('shinelight');
+	$('html').addClass('shinebright');
+  	$('body').removeClass("listing-chooser-collapsed");
+
+
 
 
 
@@ -59,15 +63,19 @@ var defaultSettings = {"global" : {"layout" : "list", "shortcuts" : "show", "nig
     "subreddits" : [
     	{"url" : "www.reddit.com/r/shine/", "layout" : "list"},
     	{"url" : "www.reddit.com/r/aww/", "layout" : "grid"},
-    	{"url" : "www.reddit.com/r/earthporn/", "layout" : "list"}
+    	{"url" : "www.reddit.com/r/earthporn/", "layout" : "list"},
+    	{"url" : "www.reddit.com/r/silhouWHAT/", "layout" : "list"}
+
     ],
 
     "multireddits" : [
     	{"url" : "www.reddit.com/user/evilnight/m/redditunes", "layout" : "grid"},
-    	{"url" : "www.reddit.com/user/Abbigale221/m/moviesandtv", "layout" : "list"}
+    	{"url" : "www.reddit.com/user/Abbigale221/m/moviesandtv", "layout" : "list"},
+    	{"url" : "www.reddit.com/r/silhouWHAT/", "layout" : "list"}
+    	
     ],
 
-    "account" : {"status" : "shinelight"},
+    "account" : {"status" : "shinebright"},
 
     "message" : ""
 
@@ -121,7 +129,7 @@ function SHINE(){
 		'<div class="dark-background"></div>'+
 
 		'<div class="shine-nav">'+
-
+			
 			'<div class="shine-menu-button shine-search">'+
 				'<label>search reddit</label>'+
 			'</div>'+
@@ -209,7 +217,7 @@ function SHINE(){
 				'<div data-settings-panel=".panel-list" class="tab tab-list">List Settings</div>'+
 			'</div>'+
 			'<div class="panel panel-default panel-active">'+
-				'<div class="shine-settings-prompt">Free shine account for everyone thanks to /u/suprunyuck.</div>'+
+				'<div class="shine-settings-prompt shine-prompt">Get a Shine Bright account to unlock the settings below.</div>'+
 				'<div class="settings-halves">'+
 					'<div class="settings-column-half">'+
 						'<label for="settings-default-view">Default View</label>'+
@@ -259,7 +267,7 @@ function SHINE(){
 				'</div>'+
 			'</div>'+
 			'<div class="panel panel-grid">'+
-				'<div class="shine-settings-prompt">Free shine account for everyone thanks to /u/suprunyuck.</div>'+
+				'<div class="shine-settings-prompt shine-prompt">Get a Shine Bright account to unlock the settings below.</div>'+
 				'<p>The settings below are applied to all Grid View pages.</p>'+
 				'<div class="settings-halves">'+
 					'<div class="settings-column-half">'+
@@ -294,7 +302,7 @@ function SHINE(){
 				'</div>'+
 			'</div>'+
 			'<div class="panel panel-list">'+
-				'<div class="shine-settings-prompt">Free shine account for everyone thanks to /u/suprunyuck.</div>'+
+				'<div class="shine-settings-prompt shine-prompt">Get a Shine Bright account to unlock the settings below.</div>'+
 				'<p>The settings below are applied to all List View pages.</p>'+
 				'<div class="settings-halves">'+
 					'<div class="settings-column-half">'+
@@ -384,6 +392,15 @@ function SHINE(){
 
 	if( currentSettings.account.status == "shinelight" ){
 
+		$('#settings-default-view').attr("disabled","disabled");
+		$('#settings-night-mode').attr("disabled","disabled");
+		$('#settings-shortcuts-bar').attr("disabled","disabled");
+		$('#settings-number-columns').attr("disabled","disabled");
+		$('#settings-show-nsfw').attr("disabled","disabled");
+		$('#settings-list-layout').attr("disabled","disabled");
+		$('#settings-grid-split').attr("disabled","disabled");
+		$('#settings-list-split').attr("disabled","disabled");
+
 	}
 
 
@@ -423,7 +440,11 @@ function SHINE(){
 	// this adds a class to the html that says if we've paid or not
 	$('html').addClass( currentSettings.account.status );
 
+	if( currentSettings.account.status == "shinelight" ){
 
+		$('#header-bottom-left').prepend('<div class="header-shine-bright shine-prompt">Get Shine Bright Now</div>');
+
+	}
 
 
 
@@ -640,41 +661,38 @@ function SHINE(){
     // LISTENING FOR MESSAGE FROM IFRAME
     
     function listener(event){
+                    
+        //time to shine bright
+        $('#settings-default-view').removeAttr("disabled");
+        $('#settings-night-mode').removeAttr("disabled");
+        $('#settings-shortcuts-bar').removeAttr("disabled");
+        $('#settings-number-columns').removeAttr("disabled");
+        $('#settings-show-nsfw').removeAttr("disabled");
+        $('#settings-list-layout').removeAttr("disabled");
+        $('#settings-grid-split').removeAttr("disabled");
+        $('#settings-list-split').removeAttr("disabled");
+
+        $('.header-shine-bright').remove();
         
-        if ( event.origin == "https://madewithgusto.com" && event.data == "shinebright" ){
+        $('html').removeClass('shinelight');
+        $('html').addClass('shinebright');
+        
+        currentSettings.account.status = "shinebright";
+        
+        chrome.storage.sync.set({"shine": currentSettings}, function(){
             
-            //time to shine bright
-            $('#settings-default-view').removeAttr("disabled");
-            $('#settings-night-mode').removeAttr("disabled");
-            $('#settings-shortcuts-bar').removeAttr("disabled");
-            $('#settings-number-columns').removeAttr("disabled");
-            $('#settings-show-nsfw').removeAttr("disabled");
-            $('#settings-list-layout').removeAttr("disabled");
-            $('#settings-grid-split').removeAttr("disabled");
-            $('#settings-list-split').removeAttr("disabled");
+            replacePanel = ''+
+            '<div class="shining-bright">'+
+                '<div id="sunburst"><img src="' + chrome.extension.getURL("sunburst.png") + '" /></div>'+
+                '<h1>You did it!</h1>'+
+                "<p>You've just unlocked the best way to experience all the delicious content reddit has to offer. You'll also have first access to all the sweet new features we'll be adding over the months and years to come. We are now massively in your debt and appreciate you supporting the hard work we've put into building SHINE. If you have any feedback or questions for us, please feel free to post in <a target='_blank' href='/r/shine'>/r/shine</a> or email us at <a target='_blank' href='mailto:shine@madewithgusto.com'>shine@madewithgusto.com</a></p><p><i>May the force be with you.</i></p><p>-The SHINE team at Gusto Creative House</p>"+
+                '<div id="shine-bright-logout">Logout of Shine Bright <img src="' + chrome.extension.getURL("logout.svg") + '" /></div>'+
+            '</div>';
+            
+            $('.shine-bright-panel').html(replacePanel);
 
-            $('.header-shine-bright').remove();
-            
-            $('html').removeClass('shinelight');
-            $('html').addClass('shinebright');
-            
-            currentSettings.account.status = "shinebright";
-            
-            chrome.storage.sync.set({"shine": currentSettings}, function(){
-                
-                replacePanel = ''+
-                '<div class="shining-bright">'+
-                    '<div id="sunburst"><img src="' + chrome.extension.getURL("sunburst.png") + '" /></div>'+
-                    '<h1>You did it!</h1>'+
-                    "<p>You've just unlocked the best way to experience all the delicious content reddit has to offer. You'll also have first access to all the sweet new features we'll be adding over the months and years to come. We are now massively in your debt and appreciate you supporting the hard work we've put into building SHINE. If you have any feedback or questions for us, please feel free to post in <a target='_blank' href='/r/shine'>/r/shine</a> or email us at <a target='_blank' href='mailto:shine@madewithgusto.com'>shine@madewithgusto.com</a></p><p><i>May the force be with you.</i></p><p>-The SHINE team at Gusto Creative House</p>"+
-                    '<div id="shine-bright-logout">Logout of Shine Bright <img src="' + chrome.extension.getURL("logout.svg") + '" /></div>'+
-                '</div>';
-                
-                $('.shine-bright-panel').html(replacePanel);
+        });
 
-            });
-            
-        }
             
     }
 
@@ -710,6 +728,20 @@ function SHINE(){
         $('body').append('<div class="shine-bright-panel"></div>');
         
     }
+
+	$('body').on('click','.shine-prompt', function(e){
+        
+        if( currentSettings.account.status == "shinelight" ){
+            $('.shine-bright-panel').html('<iframe id="shine-bright-iframe" frameborder="0" height="100%" width="100%" src="https://madewithgusto.com/SHINE-IFRAME-CREATEACCOUNT.php" />');
+        }
+
+		$('html').addClass("show-shine-bright");
+
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
+
+	});
     
     $('body').on('click','#shine-bright-logout', function(){
        
@@ -748,11 +780,6 @@ function SHINE(){
 
 
 } // end SHINE function
-
-
-
-
-
 
 
 
@@ -1463,3 +1490,7 @@ $(window).scroll(function() {
         $('html').removeClass("shine-scrolling");
     }
 });
+
+} catch(e) {
+	
+}

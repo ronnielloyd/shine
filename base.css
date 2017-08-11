@@ -16,7 +16,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 body{
@@ -29,11 +29,11 @@ html.SHINE body{
 }
 
 html.SHINE.shine-ready body{
-    opacity:1 !important;
+	opacity:1 !important;
 }
 
 html.SHINE.show-shortcuts body{
-    padding-top:65px;
+	padding-top:65px;
 }
 
 html.SHINE #header {
@@ -51,7 +51,7 @@ html.SHINE #header {
 }
 
 html.SHINE.show-shortcuts #header{
-    height:65px;
+	height:65px;
 }
 
 html.SHINE div#sr-header-area {
@@ -66,11 +66,11 @@ html.SHINE div#sr-header-area {
 }
 
 html.SHINE.res div#sr-header-area{
-    overflow: hidden;
+	overflow: hidden;
 }
 
 html.SHINE.show-shortcuts div#sr-header-area{
-    display:block;
+	display:block;
 }
 
 html.SHINE #sr-header-area a {
@@ -79,7 +79,7 @@ html.SHINE #sr-header-area a {
 
 html.SHINE #sr-header-area a.RESShortcutsCurrentSub,
 html.SHINE #sr-header-area li.selected a{
-    color: rgba(255,103,31,1) !important;
+	color: rgba(255,103,31,1) !important;
 }
 
 html.SHINE #RESShortcutsSort,
@@ -91,8 +91,8 @@ html.SHINE #RESShortcutsTrash {
 }
 
 html.SHINE #RESShortcutsEditContainer{
-    overflow: hidden;
-    background-color: transparent;
+	overflow: hidden;
+	background-color: transparent;
 }
 
 html.SHINE a#sr-more-link {
@@ -101,9 +101,9 @@ html.SHINE a#sr-more-link {
 }
 
 html.SHINE a#sr-more-link:hover{
-    background: rgba(255,103,31,1);
-    color:#fff;
-    text-decoration: none !important;
+	background: rgba(255,103,31,1);
+	color:#fff;
+	text-decoration: none !important;
 }
 
 html.SHINE #header .layout-switch {
@@ -154,34 +154,34 @@ html.SHINE.shine-list #header .layout-switch svg.list-switch{
 html.SHINE div#header-bottom-left {
     height: 45px;
     box-sizing: border-box;
-    position: relative;
+	position: relative;
 }
 
 html.SHINE #header-img-a img{
-    display:none;
+	display:none;
 }
 
 html.SHINE body #header #header-bottom-left .pagename{
-    height:45px;
-    line-height:45px;
-    font-size:16px;
-    padding:0px 0px 0px 15px;
-    box-sizing:border-box;
-    float:left;
-    display:block;
-    margin-right:0px;
-    font-variant: normal;
-    font-weight:100;
+	height:45px;
+	line-height:45px;
+	font-size:16px;
+	padding:0px 0px 0px 15px;
+	box-sizing:border-box;
+	float:left;
+	display:block;
+	margin-right:0px;
+	font-variant: normal;
+	font-weight:100;
     position: relative;
     bottom: 0px;
 }
 
 html.SHINE #header-bottom-left .pagename:before{
-    content:'/';
-    font-weight:100;
-    font-size:16px;
-    padding-right:15px;
-    color:#AAA;
+	content:'/';
+	font-weight:100;
+	font-size:16px;
+	padding-right:15px;
+	color:#AAA;
 }
 
 html.SHINE span.pagename a {
@@ -192,19 +192,19 @@ html.SHINE span.pagename a {
 }
 
 html.SHINE span.pagename a:hover{
-    text-decoration: none;
+	text-decoration: none;
 }
 
 html.SHINE #header-bottom-left #header-img-a,
 html.SHINE #header-bottom-left #header-img.default-header{
-    display:block;
-    height:45px;
-    margin:0px;
-    background:url('chrome-extension://__MSG_@@extension_id__/shine.svg') no-repeat center center;
-    position: relative;
-    float:left;
-    top:0;
-    left:0;
+	display:block;
+	height:45px;
+	margin:0px;
+	background:url('chrome-extension://__MSG_@@extension_id__/shine.svg') no-repeat center center;
+	position: relative;
+	float:left;
+	top:0;
+	left:0;
     background-size: auto 15px;
     width: 70px;
     margin-right:-10px;
@@ -212,26 +212,26 @@ html.SHINE #header-bottom-left #header-img.default-header{
 
 html.SHINE #header ul.tabmenu {
     margin: 0px !important;
-    position: relative;
-    left: 0px;
-    top:10px;
-    max-height:25px;
-    overflow:hidden !important;
-    float:left;
-    width:auto;
-    display:flex;
-    flex-direction:column;
-    padding:0px;
-    background:#fff;
-    box-shadow:0px 0px 0px rgba(0,0,0,0);
-    justify-content:space-around;
+	position: relative;
+	left: 0px;
+	top:10px;
+	max-height:25px;
+	overflow:hidden !important;
+	float:left;
+	width:auto;
+	display:flex;
+	flex-direction:column;
+	padding:0px;
+	background:#fff;
+	box-shadow:0px 0px 0px rgba(0,0,0,0);
+	justify-content:space-around;
 }
 
 html.SHINE #header ul.tabmenu:hover{
-    box-shadow: 0px 5px 5px rgba(0,0,0,.1);
-    top:0px;
-    max-height:300px;
-    padding:10px 0;
+	box-shadow: 0px 5px 5px rgba(0,0,0,.1);
+	top:0px;
+	max-height:300px;
+	padding:10px 0;
 }
 
 html.SHINE #header ul.tabmenu li {
@@ -242,47 +242,47 @@ html.SHINE #header ul.tabmenu li {
     font-size:16px;
     display:flex;
     order:2;
-    height:30px;
-    opacity:0;
+	height:30px;
+	opacity:0;
 }
 
 html.SHINE #header ul.tabmenu:hover li{
-    opacity:1;
+	opacity:1;
 }
 
 html.SHINE #header ul.tabmenu li.selected{
-    order:1;
-    opacity:1;
+	order:1;
+	opacity:1;
 }
 
 html.SHINE #header ul.tabmenu li a,
 html.SHINE #header ul.tabmenu li.selected a{
-    display:block;
-    padding:0px;
-    font-size:16px;
-    font-weight:100;
-    background-color:transparent;
-    color:#333;
-    height:25px;
-    box-sizing:border-box;
-    line-height:25px;
-    border:0px;
-    padding:0px 45px 0px 15px;
-    width:100%;
+	display:block;
+	padding:0px;
+	font-size:16px;
+	font-weight:100;
+	background-color:transparent;
+	color:#333;
+	height:25px;
+	box-sizing:border-box;
+	line-height:25px;
+	border:0px;
+	padding:0px 45px 0px 15px;
+	width:100%;
 }
 
 html.SHINE #header ul.tabmenu li.selected a{
-    font-weight:400;
+	font-weight:400;
 }
 
 html.SHINE #header ul.tabmenu li a:before{
-    content:'/';
-    display:inline-block;
-    margin-right:10px;
+	content:'/';
+	display:inline-block;
+	margin-right:10px;
 }
 
 html.SHINE #header-bottom-right{
-    position: absolute;
+	position: absolute;
     bottom: 10px;
     height: 25px;
     box-sizing: border-box;
@@ -297,23 +297,23 @@ html.SHINE #header-bottom-right{
 }
 
 html.SHINE #header-bottom-right a{
-    color:#333;
-    font-weight:400;
+	color:#333;
+	font-weight:400;
 }
 
 html.SHINE #header-bottom-right a:hover{
-    text-decoration: none;
+	text-decoration: none;
 }
 
 html.SHINE #header-bottom-right #userbarToggle,
 html.SHINE #header-bottom-right .beta-hint,
 html.SHINE #header-bottom-right span.separator,
 html.SHINE #header-bottom-right ul.flat-list{
-    display:none;
+	display:none;
 }
 
 html.SHINE #header-bottom-right .user{
-    color:rgba(255,255,255,0);
+	color:rgba(255,255,255,0);
 }
 
 html.SHINE #header-bottom-right .user .userkarma{
@@ -370,12 +370,12 @@ html.SHINE #header-bottom-right a.message-count {
     color: #fff;
     font-weight: 800;
     font-size: 12px;
-    background:rgba(255,103,0,1);
+    background:rgba(58, 167, 234,1);
 }
 
 html.SHINE #header-bottom-right #RESAccountSwitcherIcon {
     background-image: url('chrome-extension://__MSG_@@extension_id__/account-switcher.svg');
-    margin: 0 5px 0 10px;
+	margin: 0 5px 0 10px;
     display: inline-block;
     width: 20px;
     background-size: contain;
@@ -414,15 +414,15 @@ html.SHINE #header-bottom-right #RESSettingsButton {
 
 html.SHINE #header-bottom-right .gearIcon::before, 
 html.SHINE #header-bottom-right .gearIcon::after{
-    display:none !important;
+	display:none !important;
 }
 
 html.SHINE #NREFloat{
-    display:none !important;
+	display:none !important;
 }
 
 html.SHINE #RESAccountSwitcherIconOverlay{
-    opacity:0 !important;
+	opacity:0 !important;
 }
 
 @keyframes ACCOUNTSWITCHER {
@@ -446,7 +446,7 @@ html.SHINE body.loggedin ul#RESAccountSwitcherDropdown{
 }
 
 html.SHINE.show-shortcuts ul#RESAccountSwitcherDropdown{
-    top:65px !important;
+	top:65px !important;
 }
 
 html.SHINE ul#RESAccountSwitcherDropdown li {
@@ -461,11 +461,11 @@ html.SHINE ul#RESAccountSwitcherDropdown li {
 }
 
 html.SHINE ul#RESAccountSwitcherDropdown li.accountName{
-    border-bottom:1px solid #DDD;
+	border-bottom:1px solid #DDD;
 }
 
 html.SHINE #RESMainGearOverlay{
-    display:none !important;
+	display:none !important;
 }
 
 html.SHINE div#RESPrefsDropdown {
@@ -481,7 +481,7 @@ html.SHINE div#RESPrefsDropdown {
 }
 
 html.SHINE.show-shortcuts div#RESPrefsDropdown{
-    top: 65px !important;
+	top: 65px !important;
 }
 
 html.SHINE #RESPrefsDropdown li {
@@ -494,22 +494,22 @@ html.SHINE #RESPrefsDropdown li {
 }
 
 html.SHINE #RESPrefsDropdown li a{
-    color:#333;
+	color:#333;
 }
 
 html.SHINE #RESPrefsDropdown li:hover{
-    background-color:transparent !important;
-    color:#333 !important;
-    border-bottom: 1px solid #DDD !important;
+	background-color:transparent !important;
+	color:#333 !important;
+	border-bottom: 1px solid #DDD !important;
 }
 
 html.SHINE #RESPrefsDropdown li a:hover{
-    background-color:transparent !important;
-    color:#333 !important;
+	background-color:transparent !important;
+	color:#333 !important;
 }
 
 html.SHINE #RESSearchMenuItem{
-    display:none !important;
+	display:none !important;
 }
 
 html.SHINE.expanding body,
@@ -655,7 +655,7 @@ html.SHINE .shine-nav .shine-navicon{
     width:56px;
     height:56px;
     display:block;
-    background: rgba(255,103,0,1);
+    background: rgba(58, 167, 234,1);
     animation: NAVICON 500ms 1s backwards cubic-bezier(.17,.67,.15,1.61);
     display:block !important;
     border:0px !important;
@@ -763,7 +763,7 @@ html.SHINE .shine-nav:hover .shine-bright-nav{
 /* SIDEBAR */
 
 html.SHINE .side{
-    display:none !important;
+	display:none !important;
 }
 
 html.SHINE.show-sidebar .side {
@@ -1129,22 +1129,22 @@ html.SHINE.shine-grid .shine-expand .toggle-child-comments {
 
 html.SHINE.shine-list.shine-split-6040 .shine-expand .toggle-child-comments,
 html.SHINE.shine-grid.shine-split-6040 .shine-expand .toggle-child-comments{
-    width:40%;
+	width:40%;
 }
 
 html.SHINE.shine-list.shine-split-5050 .shine-expand .toggle-child-comments,
 html.SHINE.shine-grid.shine-split-5050 .shine-expand .toggle-child-comments{
-    width:50%;
+	width:50%;
 }
 
 html.SHINE.shine-list.shine-split-4060 .shine-expand .toggle-child-comments,
 html.SHINE.shine-grid.shine-split-4060 .shine-expand .toggle-child-comments{
-    width:60%;
+	width:60%;
 }
 
 html.SHINE.shine-list.shine-split-3070 .shine-expand .toggle-child-comments,
 html.SHINE.shine-grid.shine-split-3070 .shine-expand .toggle-child-comments{
-    width:70%;
+	width:70%;
 }
 
 
@@ -1375,7 +1375,7 @@ html.SHINE.shinebright .shine-settings-prompt{
     line-height:20px;
     padding:5px 0;
     display:inline-block;
-    color:rgb(255,103,0);
+    color:rgb(58, 167, 234);
 }
 
 .settings-panel li .default-view{
