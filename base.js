@@ -1,6 +1,6 @@
 // GLOBAL RESETS AND FIXES 
 $('body').removeClass("listing-chooser-collapsed");
-
+$('html').addClass('shinebright');
 
 
 
