@@ -79,7 +79,7 @@ html.SHINE #sr-header-area a {
 
 html.SHINE #sr-header-area a.RESShortcutsCurrentSub,
 html.SHINE #sr-header-area li.selected a{
-	color: rgba(255,103,31,1) !important;
+	color: rgba(58, 167, 234,1) !important;
 }
 
 html.SHINE #RESShortcutsSort,
@@ -101,7 +101,7 @@ html.SHINE a#sr-more-link {
 }
 
 html.SHINE a#sr-more-link:hover{
-	background: rgba(255,103,31,1);
+	background: rgba(58, 167, 234,1);
 	color:#fff;
 	text-decoration: none !important;
 }

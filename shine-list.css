@@ -355,7 +355,7 @@ html.SHINE.shine-list .shine-expand .album-thumbnails img{
 }
 
 html.SHINE.shine-list .shine-expand .album-thumbnails img.active-thumb{
-    border:2px solid rgba(255,103,31,1);
+    border:2px solid rgba(58, 167, 234,1);
 }
 
 html.SHINE .album-captions{
