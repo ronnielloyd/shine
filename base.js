@@ -121,10 +121,6 @@ function SHINE(){
 
 		'<div class="shine-nav">'+
 
-			'<div class="shine-menu-button shine-bright-nav">'+
-				'<label>shine bright</label>'+
-			'</div>'+
-			
 			'<div class="shine-menu-button shine-search">'+
 				'<label>search reddit</label>'+
 			'</div>'+
